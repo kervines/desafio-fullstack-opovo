@@ -7,6 +7,25 @@ import { Modules } from '@/components/organisms/Single/Modules';
 import { ListCourses } from '@/components/organisms/ListCourses';
 import { Investiment } from '@/components/organisms/Single/Investment';
 import { getCourseById } from '@/repositories/api';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const course = await getCourseById(1);
+
+  return {
+    title: course.titulo,
+    description: course.descricao,
+    openGraph: {
+      title: course.titulo,
+      description: course.descricao,
+      images: [course.thumbnail ?? ''],
+    },
+  };
+}
 
 export default async function Home() {
   const course = await getCourseById(1);

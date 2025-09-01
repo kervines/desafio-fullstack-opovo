@@ -5,6 +5,25 @@ import { ListCourses } from '@/components/organisms/ListCourses';
 import { Investiment } from '@/components/organisms/Single/Investment';
 import { getCourseById } from '@/repositories/api';
 import { Modules } from '@/components/organisms/Single/Modules';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: number };
+}): Promise<Metadata> {
+  const course = await getCourseById(Number(params.id));
+
+  return {
+    title: course.titulo,
+    description: course.descricao,
+    openGraph: {
+      title: course.titulo,
+      description: course.descricao,
+      images: [course.thumbnail ?? ''],
+    },
+  };
+}
 
 export default async function Single(pageProps: PageProps<'/cursos/[id]'>) {
   const { id } = await pageProps.params;
