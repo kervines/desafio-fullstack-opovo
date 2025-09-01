@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Frontend - Projeto Next.js
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-First, run the development server:
+Este é o **frontend** do projeto, desenvolvido com **Next.js**, um framework React moderno que facilita a construção de aplicações web escaláveis e performáticas.
+
+---
+
+## 🎯 Por que Next.js?
+
+Escolhemos o Next.js pelos seguintes motivos:
+
+- **Roteamento automático e SSR:** Suporte a Server-Side Rendering, Static Site Generation e API Routes.
+- **Desempenho:** Otimização automática de imagens, bundle splitting e carregamento rápido.
+- **Integração com React:** Total compatibilidade com o ecossistema React.
+- **SEO:** Renderização no servidor melhora o SEO da aplicação.
+- **Escalabilidade:** Fácil integração com APIs, microserviços e projetos complexos.
+
+---
+
+## 🛠 Pré-requisitos
+
+Antes de instalar, certifique-se de ter:
+
+- [Node.js 18+](https://nodejs.org/)
+- [npm 9+ ou yarn](https://classic.yarnpkg.com/lang/en/docs/install/)
+- [Docker](https://www.docker.com/get-started) (opcional)
+
+---
+
+## 🐳 Instalação com Docker
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-projeto-frontend.git
+cd seu-projeto-frontend
+```
+
+2. Copie o arquivo de ambiente e configure:
+
+```bash
+cp .env.example .env.local
+```
+
+Edite .env.local conforme necessário (API base URL, chaves, etc).
+
+Suba os containers com Docker:
+
+```bash
+docker-compose up -d
+```
+
+Isso iniciará:
+
+frontend: Container Node.js + Next.js
+
+outros serviços: conforme seu docker-compose.yml (opcional)
+
+Acesse a aplicação:
+
+Frontend: http://localhost:3000
+
+## ⚡ Instalação com Node.js (sem Docker)
+
+Clone o projeto:
+
+git clone https://github.com/seu-usuario/seu-projeto-frontend.git
+cd seu-projeto-frontend
+
+Instale as dependências:
+
+```bash
+npm install
+yarn install
+cp .env.example .env.local
+npm run dev
+# ou
+yarn dev
+```
+
+A aplicação estará disponível em http://localhost:3000.
+
+## ⚡ Comandos úteis do Next.js
+
+Rodar em desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build para produção:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Estrutura do projeto
 
-## Learn More
+pages/ # Rotas da aplicação
+components/ # Componentes React reutilizáveis
+public/ # Arquivos estáticos
+styles/ # Arquivos CSS / SCSS
+hooks/ # Custom React hooks
+context/ # Context API
+utils/ # Funções utilitárias
+.env.local # Variáveis de ambiente
 
-To learn more about Next.js, take a look at the following resources:
+## 📝 Licença
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto está licenciado sob a MIT License.

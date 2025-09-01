@@ -1,103 +1,132 @@
-import Image from "next/image";
+import Image from 'next/image';
+import HamburgerIcon from '@/icons/hamburger.svg';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="home-page ">
+      <section className="slide p-2">
+        <div className="slide-item">
+          <Image
+            src="/image/366x244.svg"
+            alt="icone de usuario"
+            width={366}
+            height={244}
+          />
+          <div className="categorias flex gap-2">
+            <span className="border-2 border-sky-500">CATEGORIA</span>
+            <span className="border-2 border-sky-500">CATEGORIA</span>
+          </div>
+          <h2 className="text-2xl">Nome do curso</h2>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="slide-item">
+          <img src="" alt="imagem do curso" className="bg-img" />
+          <span>Curso livre</span>
+          <h2>Nome do curso</h2>
+          <button>Ver mais</button>
+        </div>
+        <div className="slide-item">
+          <img src="" alt="imagem do curso" className="bg-img" />
+          <span>Curso livre</span>
+          <h2>Nome do curso</h2>
+          <button>Ver mais</button>
+        </div>
+      </section>
+      <hr />
+      <section className="curso">
+        <h2>Cursos</h2>
+        <button>ver mais</button>
+
+        <div className="card">
+          <img src="" alt="imagem de curso" />
+          <span>Extensão</span>
+          <span>Bem-viver</span>
+          <h3>Educação Ambiental para um Presente Sustentável</h3>
+          <span>Por Fundação Demócrito Rocha</span>
+        </div>
+        <div className="card">
+          <img src="" alt="imagem de curso" />
+          <span>Extensão</span>
+          <span>Bem-viver</span>
+          <h3>Educação Ambiental para um Presente Sustentável</h3>
+          <span>Por Fundação Demócrito Rocha</span>
+        </div>
+        <div className="card">
+          <img src="" alt="imagem de curso" />
+          <span>Extensão</span>
+          <span>Bem-viver</span>
+          <h3>Educação Ambiental para um Presente Sustentável</h3>
+          <span>Por Fundação Demócrito Rocha</span>
+        </div>
+        <div className="card">
+          <img src="" alt="imagem de curso" />
+          <span>Extensão</span>
+          <span>Bem-viver</span>
+          <h3>Educação Ambiental para um Presente Sustentável</h3>
+          <span>Por Fundação Demócrito Rocha</span>
+        </div>
+      </section>
+      <hr />
+      <section className="sobre-uane">
+        <h2>Sobre a UANE</h2>
+        <button>ver mais</button>
+
+        <div className="sobre-uane-item">
+          <h3>+40</h3>
+          <p>anos de mercado</p>
+        </div>
+        <div className="sobre-uane-item">
+          <h3>+1,6M</h3>
+          <p>alunos em todo Brasil</p>
+        </div>
+        <div className="sobre-uane-item">
+          <h3>+90</h3>
+          <p>Cursos de extensão</p>
+        </div>
+        <div className="sobre-uane-item">
+          <h3>+60</h3>
+          <p>Cursos gratuitos</p>
+        </div>
+        <div className="sobre-uane-item">
+          <h3>31</h3>
+          <p>POLOS DE APOIO PRESENCIAL NOS MUNICÍPIOS</p>
+        </div>
+        <div className="sobre-uane-item">
+          <h3>+30</h3>
+          <p>TURMAS DO CURSO NOVOS TALENTOS PARA JORNALISMO</p>
+        </div>
+        <div className="sobre-uane-item">
+          <h3>+35</h3>
+          <p>TURMAS DE CURSOS TÉCNICOS SECRETARIA ESCOLAR</p>
+        </div>
+        <div className="sobre-uane-item">
+          <h3>+150</h3>
+          <p>
+            TUTORES ATUARAM EM ATENDIMENTO DE SUPORTE E ACOMPANHAMENTO
+            PEDAGÓGICO DOS CURSOS
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section className="parcerias">
+        <h2>Parcerias</h2>
+        <button>ver mais</button>
+        <div className="parcerias-logo">
+          <img src="" alt="Universidade Federal do Ceará" />
+          <img src="" alt="Universidade Estadual do Ceará" />
+          <img src="" alt="UERN" />
+        </div>
+      </section>
+      <hr />
+      <section className="mais-informacao">
+        <h2>Precisa de mais informações sobre os cursos?</h2>
+        <p>
+          Te ajudamos a decidir qual o melhor curso para você, de acordo com as
+          suas necessidades e expectativas!
+        </p>
+        <button>Tire suas dúvidas</button>
+        <button>Precisa de ajuda?</button>
+      </section>
+      <hr />
     </div>
   );
 }

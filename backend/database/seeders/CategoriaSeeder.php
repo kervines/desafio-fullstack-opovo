@@ -28,6 +28,10 @@ class CategoriaSeeder extends Seeder
                 "slug" => CategoriasEnum::CURTA_DURACAO
             ],
             [
+                "titulo" => "Livre",
+                "slug" => CategoriasEnum::LIVRE
+            ],
+            [
                 "titulo" => "Negócios",
                 "slug" => CategoriasEnum::NEGOCIOS
             ],

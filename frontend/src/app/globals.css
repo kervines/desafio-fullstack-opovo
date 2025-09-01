@@ -1,26 +1,29 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@plugin 'flowbite-react/plugin/tailwindcss';
+@source '../../.flowbite-react/class-list.json';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --breakpoint-2xl: 1024px;
+  --breakpoint-md: 744px;
+
+  --color-primary-medium: #121e3e;
+  --color-primary-low: #17254d;
+  --color-primary-high: #04254e;
+
+  --color-secondary-medium: #1f6482;
+  --color-secondary-low: #138e98;
+  --color-secondary-light: #d0fbeb;
+
+  --color-gray-medium: #999999;
+  --color-gray-low: #d9d9d9;
+  --color-gray: #dfdfdf;
+
+  --color-dark: #1e1e1e;
+
+  --text-large: 2rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.flowbite-accordion-item-header[data-accordion-target] button::after {
+  background-image: url('/image/accordion.svg') !important; /* Replace with your SVG or image */
+  /* Adjust background-size, background-position as needed */
 }
