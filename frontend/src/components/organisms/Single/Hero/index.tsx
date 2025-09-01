@@ -20,7 +20,7 @@ export const Hero = ({ course }: HeroProps) => {
 
         <div className="flex flex-col 2xl:gap-4">
           <div className="categorias flex gap-2 mt-4">
-            {course.categorias.map((category) => (
+            {course.categorias?.map((category) => (
               <Tag key={category.slug} label={category.titulo} />
             ))}
           </div>

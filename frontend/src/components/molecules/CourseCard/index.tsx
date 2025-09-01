@@ -20,7 +20,7 @@ export const CourseCard = ({ course }: CourseCardProps) => {
       <div className="flex flex-col h-[212px] py-4 px-3 justify-between">
         <div className="flex flex-col gap-2">
           <div className="categorias flex gap-2 mt-4">
-            {course.categorias.map((category) => (
+            {course.categorias?.map((category) => (
               <Tag size="low" key={category.slug} label={category.titulo} />
             ))}
           </div>

@@ -23,6 +23,7 @@ class CursoSeeder extends Seeder
                 "titulo" => "Secretaria Escolar",
                 "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis sagittis nulla. Quisque id magna est. Ut scelerisque elementum dapibus. In feugiat ante nulla, id facilisis quam lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo eleifend dictum.",
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "valor" => 2835.35,
                 "valor_matricula" => 70,
                 "thumbnail" => "https:/placehold.co/636x462",
@@ -95,6 +96,7 @@ class CursoSeeder extends Seeder
                 "valor" => 0,
                 "valor_matricula" => 0,
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "lote" => null,
                 "qnt_parcelas" => 1,
                 "carga_horaria" => 30,
@@ -125,6 +127,7 @@ class CursoSeeder extends Seeder
                 "valor" => 0,
                 "valor_matricula" => 0,
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "lote" => null,
                 "qnt_parcelas" => 1,
                 "carga_horaria" => 72,
@@ -177,6 +180,7 @@ class CursoSeeder extends Seeder
                 "valor" => 0,
                 "valor_matricula" => 0,
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "lote" => null,
                 "qnt_parcelas" => 1,
                 "carga_horaria" => 72, // sem info no site
@@ -227,6 +231,7 @@ class CursoSeeder extends Seeder
                 "valor" => 0,
                 "valor_matricula" => 0,
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "lote" => null,
                 "qnt_parcelas" => 1,
                 "carga_horaria" => 30,
@@ -258,6 +263,7 @@ class CursoSeeder extends Seeder
                 "valor" => 97.00,
                 "valor_matricula" => 0,
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "lote" => null,
                 "qnt_parcelas" => 10,
                 "carga_horaria" => 40,
@@ -308,6 +314,7 @@ class CursoSeeder extends Seeder
                 "valor" => 497.00,
                 "valor_matricula" => 0,
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "lote" => null,
                 "qnt_parcelas" => 10,
                 "carga_horaria" => 90,
@@ -374,6 +381,7 @@ class CursoSeeder extends Seeder
                 "valor" => 69.90,
                 "valor_matricula" => 0,
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "lote" => null,
                 "qnt_parcelas" => 3,
                 "carga_horaria" => 140,
@@ -464,6 +472,7 @@ class CursoSeeder extends Seeder
                 "valor" => 126.00,
                 "valor_matricula" => 0,
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "lote" => null,
                 "qnt_parcelas" => 5,
                 "carga_horaria" => 160,
@@ -554,6 +563,7 @@ class CursoSeeder extends Seeder
                 "valor" => 69.90,
                 "valor_matricula" => 0,
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "lote" => null,
                 "qnt_parcelas" => 2,
                 "carga_horaria" => 160,
@@ -622,6 +632,7 @@ class CursoSeeder extends Seeder
                 "valor" => 50.00,
                 "valor_matricula" => 0,
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "lote" => null,
                 "qnt_parcelas" => 2,
                 "carga_horaria" => 140,
@@ -712,6 +723,7 @@ class CursoSeeder extends Seeder
                 "valor" => 198.75,
                 "valor_matricula" => 0,
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "lote" => null,
                 "qnt_parcelas" => 5,
                 "carga_horaria" => 90,
@@ -755,6 +767,7 @@ class CursoSeeder extends Seeder
                 "valor" => 60.00,
                 "valor_matricula" => 0,
                 "thumbnail" => "https://placehold.co/636x462",
+                "autor" => "Fundação Demócrito Rocha",
                 "lote" => null,
                 "qnt_parcelas" => 2,
                 "carga_horaria" => 120,
@@ -830,7 +843,7 @@ class CursoSeeder extends Seeder
         ];
 
         foreach ($cursos as $cursoRaw) {
-            $data = Arr::only($cursoRaw, ['titulo','descricao','valor','valor_matricula','lote','qnt_parcelas','carga_horaria','periodo','tipo_periodo','modalidade', 'thumbnail']);
+            $data = Arr::only($cursoRaw, ['titulo','descricao','valor','valor_matricula','lote','qnt_parcelas','carga_horaria','periodo','tipo_periodo','modalidade', 'thumbnail', 'autor']);
 
             $curso = Curso::create($data);
 
